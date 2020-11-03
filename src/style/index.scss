@@ -14,3 +14,25 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.pill-nav a {
+  display: inline-block;
+  //background: blue;
+  padding: 6px 15px !important;
+  color: black;
+  margin-right: 15px;
+  border-radius: 20px;
+  padding-left: 55px;
+  border: 1px solid #e6e6e6;
+}
+/* Change the color of links on mouse-over */
+.pill-nav a:hover {
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+}
+
+/* Add a color to the active/current link */
+.pill-nav a.active {
+  //background-color: blue;
+  color: black;
+}
