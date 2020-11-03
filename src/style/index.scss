@@ -16,12 +16,15 @@
 */
 .pill-nav a {
   display: inline-block;
-  //background: blue;
   padding: 6px 15px !important;
+  text-align: center;
   color: black;
   margin-right: 15px;
+  margin: 5px;
   border-radius: 20px;
-  padding-left: 55px;
+  padding-left: 300px;
+  //   width: 10px;
+
   border: 1px solid #e6e6e6;
 }
 /* Change the color of links on mouse-over */
@@ -33,6 +36,60 @@
 
 /* Add a color to the active/current link */
 .pill-nav a.active {
-  //background-color: blue;
+  background-color: blue;
   color: black;
+}
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+@media (max-width: 575px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
+  }
+}
+.footer-row1 {
+  margin-top: 80px;
+  padding: 1.2em 0;
+  background: #000;
+  bottom: 0;
+  margin-right: -33px;
+  font-family: "Fjalla One", Verdana, Geneva, sans-serif;
+  font-size: 0.95em;
+  text-transform: uppercase;
+}
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+.top-footer {
+  background-color: black;
+  display: block;
+  width: 100%;
+}
+.bottom-footer {
+  background-color: white;
+  display: block;
+  width: 100%;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
 }
