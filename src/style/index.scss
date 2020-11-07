@@ -1,19 +1,5 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
-    body{
-        background: #BDBDBD;
-    }
-    
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
 .pill-nav a {
   display: inline-block;
   padding: 6px 15px !important;
@@ -27,58 +13,86 @@
 
   border: 1px solid #e6e6e6;
 }
-/* Change the color of links on mouse-over */
+/* color of links on mouse-over */
 .pill-nav a:hover {
   background-color: blue;
   color: white;
   text-decoration: none;
 }
 
-/* Add a color to the active/current link */
+/* Add a color for active/current link */
 .pill-nav a.active {
   background-color: blue;
   color: black;
 }
-.grid:after {
-  content: "";
-  display: block;
-  clear: both;
+// second grid
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-.grid-sizer,
-.grid-item {
-  width: 33.333%;
-}
-@media (max-width: 575px) {
-  .grid-sizer,
-  .grid-item {
-    width: 100%;
-  }
-}
-@media (min-width: 576px) and (max-width: 767px) {
-  .grid-sizer,
-  .grid-item {
-    width: 50%;
-  }
-}
-.footer-row1 {
-  margin-top: 80px;
-  padding: 1.2em 0;
-  background: #000;
-  bottom: 0;
-  margin-right: -33px;
-  font-family: "Fjalla One", Verdana, Geneva, sans-serif;
-  font-size: 0.95em;
-  text-transform: uppercase;
-}
-.grid-item {
-  float: left;
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
 }
 
-.grid-item img {
-  display: block;
-  max-width: 100%;
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
 }
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+// first grid
+// .grid:after {
+//   content: "";
+//   display: block;
+//   clear: both;
+// }
+
+// .grid-sizer,
+// .grid-item {
+//   width: 33.333%;
+// }
+// @media (max-width: 575px) {
+//   // @media (max-width: 575px) {
+//   .grid-sizer,
+//   .grid-item {
+//     width: 100%;
+//   }
+// }
+// @media (min-width: 576px) and (max-width: 1000px) {
+//   .grid-sizer,
+//   .grid-item {
+//     width: 50%;
+//   }
+// }
+
+// .grid-item {
+//   float: left;
+// }
+
+// .grid-item img {
+//   display: inline-block;
+//   max-width: 100%;
+// }
 .top-footer {
   background-color: black;
   display: block;
@@ -100,3 +114,14 @@
   text-align: center;
   color: #fff;
 }
+
+// .footer-row1 {
+//   margin-top: 80px;
+//   padding: 1.2em 0;
+//   background: #000;
+//   bottom: 0;
+//   margin-right: -33px;
+//   font-family: "Fjalla One", Verdana, Geneva, sans-serif;
+//   font-size: 0.95em;
+//   text-transform: uppercase;
+// }
